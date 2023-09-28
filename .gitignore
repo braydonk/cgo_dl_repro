@@ -3,3 +3,4 @@
 cgo_dl_repro
 _obj*
 main
+main.s

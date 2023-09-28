@@ -5,4 +5,8 @@ liblib:
 
 .PHONY: mainc
 mainc:
-	gcc -Wl,--unresolved-symbols=ignore-in-object-files -o main main.c
+	gcc -ggdb -Wl,--unresolved-symbols=ignore-in-object-files -o main main.c
+
+.PHONY: mainasm
+mainasm:
+	gcc -c -S main.c
