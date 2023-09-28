@@ -9,4 +9,4 @@ mainc:
 
 .PHONY: mainasm
 mainasm:
-	gcc -c -S main.c
+	gcc -S -Wl,--unresolved-symbols=ignore-in-object-files main.c
