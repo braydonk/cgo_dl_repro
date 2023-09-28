@@ -7,20 +7,19 @@ package main
 import "C"
 import (
 	"fmt"
-	"log"
 )
 
 func main() {
 	// handle, err := loadLiblibNow()
-	handle, err := loadLiblibLazy()
-	if err != nil {
-		log.Fatal(err)
-	}
-	addr, err := dlSym(handle, "get42")
-	if err != nil {
-		log.Fatal(err)
-	}
-	fmt.Println("get42 address: ", addr)
+	// handle, err := loadLiblibLazy()
+	// if err != nil {
+	// 	log.Fatal(err)
+	// }
+	// get42Addr, err := dlSym(handle, "get42")
+	// if err != nil {
+	// 	log.Fatal(err)
+	// }
+	// fmt.Println("get42 address: ", get42Addr)
 	ret := C.get42()
 	fmt.Println(ret)
 }
